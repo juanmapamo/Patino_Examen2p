@@ -28,4 +28,25 @@ int main() {
     return 0;
 }
 
+// Aqui vamos a generar numeros aleatorios que seran vistos como las calificaciones de los estudiantes, entre el 0 al 10
+
+void genCalif(float calif[][23]) {
+    srand(time(NULL));
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 23; j++) {
+            calif[i][j] = (rand() % 101) / 10.0;
+        }
+    }
+}
+
+void mostrarMat(float calif[][23]) {
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 23; j++) {
+            printf("%.2f\t", calif[i][j]);
+        }
+        printf("\n");
+    }
+}
+
 
