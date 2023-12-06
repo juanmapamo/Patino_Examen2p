@@ -77,3 +77,26 @@ void promGrupo(float calif[][23]) {
     }
 }
 
+// Aqui vamos a buscar cual fue el estudiante con mejor puntaje del semestre
+
+int mejorEst(float calif[][23]) {
+    float mejorPromedio = 0;
+    int mejorAlumno = 0;
+
+    for (int i = 0; i < 23; i++) {
+        float promedio = 0;
+
+        for (int j = 0; j < 3; j++) {
+            promedio += calif[j][i];
+        }
+
+        promedio /= 3;
+
+        if (promedio > mejorPromedio) {
+            mejorPromedio = promedio;
+            mejorAlumno = i;
+        }
+    }
+
+    return mejorAlumno;
+}
