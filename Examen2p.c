@@ -49,4 +49,17 @@ void mostrarMat(float calif[][23]) {
     }
 }
 
+// Aqui vamos a calcular el promedio de cada alumno por progreso
+
+void promEst(float calif[][23]) {
+    for (int i = 0; i < 23; i++) {
+        float suma = 0;
+
+        for (int j = 0; j < 3; j++) {
+            suma += calif[j][i];
+        }
+
+        printf("Estudiante %d: %.2f\n", i + 1, suma / 3);
+    }
+}
 
