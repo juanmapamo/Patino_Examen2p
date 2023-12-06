@@ -63,3 +63,17 @@ void promEst(float calif[][23]) {
     }
 }
 
+// Aqui vamos a calcular el promedio grupal por cada progreso
+
+void promGrupo(float calif[][23]) {
+    for (int i = 0; i < 3; i++) {
+        float suma = 0;
+
+        for (int j = 0; j < 23; j++) {
+            suma += calif[i][j];
+        }
+
+        printf("Progreso %d: %.2f\n", i + 1, suma / 23);
+    }
+}
+
