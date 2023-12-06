@@ -97,6 +97,5 @@ int mejorEst(float calif[][23]) {
             mejorAlumno = i;
         }
     }
-
     return mejorAlumno;
 }
